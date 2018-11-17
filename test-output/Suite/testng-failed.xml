@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="baseUrl" value="http://127.0.0.1/login.do"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="WAIT_TIME" value="60"/>
+    <classes>
+      <class name="com.actitime.testScripts.LoginTestCase">
+        <methods>
+          <include name="LoginFunction"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.actitime.testScripts.LoginTestCase -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

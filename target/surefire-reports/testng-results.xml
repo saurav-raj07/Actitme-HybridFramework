@@ -10,17 +10,23 @@
     <line>
       <![CDATA[--> Login button clicked]]>
     </line>
+    <line>
+      <![CDATA[--> LoginFunction is Passed Sucessfully]]>
+    </line>
+    <line>
+      <![CDATA[--> Browser closed]]>
+    </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="48030" started-at="2018-11-17T18:02:20Z" finished-at="2018-11-17T18:03:08Z">
+  <suite name="Suite" duration-ms="43437" started-at="2018-11-17T19:30:24Z" finished-at="2018-11-17T19:31:07Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="48030" started-at="2018-11-17T18:02:20Z" finished-at="2018-11-17T18:03:08Z">
+    <test name="Test" duration-ms="43437" started-at="2018-11-17T19:30:24Z" finished-at="2018-11-17T19:31:07Z">
       <class name="com.actitime.testScripts.LoginTestCase">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.actitime.testScripts.LoginTestCase@3b0143d3]" name="setUp" is-config="true" duration-ms="33463" started-at="2018-11-17T18:02:20Z" finished-at="2018-11-17T18:02:53Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.actitime.testScripts.LoginTestCase@731a74c]" name="setUp" is-config="true" duration-ms="35118" started-at="2018-11-17T19:30:24Z" finished-at="2018-11-17T19:30:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="LoginFunction()[pri:0, instance:com.actitime.testScripts.LoginTestCase@3b0143d3]" name="LoginFunction" duration-ms="7474" started-at="2018-11-17T18:02:53Z" finished-at="2018-11-17T18:03:00Z">
+        <test-method status="PASS" signature="LoginFunction()[pri:0, instance:com.actitime.testScripts.LoginTestCase@731a74c]" name="LoginFunction" duration-ms="7522" started-at="2018-11-17T19:30:59Z" finished-at="2018-11-17T19:31:06Z">
           <reporter-output>
             <line>
               <![CDATA[--> username entered]]>
@@ -33,8 +39,21 @@
             </line>
           </reporter-output>
         </test-method> <!-- LoginFunction -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.actitime.testScripts.LoginTestCase@3b0143d3]" name="tearDown" is-config="true" duration-ms="7053" started-at="2018-11-17T18:03:00Z" finished-at="2018-11-17T18:03:08Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.actitime.testScripts.LoginTestCase@731a74c]" name="tearDown" is-config="true" duration-ms="782" started-at="2018-11-17T19:31:06Z" finished-at="2018-11-17T19:31:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=LoginFunction status=SUCCESS method=LoginTestCase.LoginFunction()[pri:0, instance:com.actitime.testScripts.LoginTestCase@731a74c] output=--> username entered]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
+            <line>
+              <![CDATA[--> LoginFunction is Passed Sucessfully]]>
+            </line>
+            <line>
+              <![CDATA[--> Browser closed]]>
+            </line>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.actitime.testScripts.LoginTestCase -->

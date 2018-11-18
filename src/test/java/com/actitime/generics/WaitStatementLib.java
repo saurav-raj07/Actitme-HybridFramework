@@ -11,9 +11,13 @@ public class WaitStatementLib {
 	
 	WebDriver driver;
 
+	// **************constructor*******************
 	public WaitStatementLib(WebDriver driver) {
-		this.driver = driver;
-	}
+		this.driver = driver; 
+/*this is to match the driver in the waitStatementLib class (In line 12)
+with the driver instance passed from the invoking class*/
+
+		}
 
 	public void iSleep(int secs) {
 		try {
@@ -27,7 +31,7 @@ public class WaitStatementLib {
 		driver.manage().timeouts().implicitlyWait(secs, TimeUnit.SECONDS);
 	}
 
-	public void eWait(int secs, WebElement element) {
+	public void  eWait(int secs, WebElement element) {
 		WebDriverWait wdw = new WebDriverWait(driver, secs);
 		wdw.until(ExpectedConditions.visibilityOf(element));
 	}

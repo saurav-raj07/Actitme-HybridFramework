@@ -12,7 +12,7 @@ import org.testng.annotations.BeforeMethod;
 
 public class BaseLib {
 
-	public static WebDriver driver;
+	public WebDriver driver;
 
 	@BeforeMethod
 	public void setUp() throws IOException {

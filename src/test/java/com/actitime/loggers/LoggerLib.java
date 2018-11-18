@@ -4,11 +4,14 @@ package com.actitime.loggers;
 
 public class LoggerLib {
 
-	//static Logger customLogs = Logger.getLogger(LoggerLib.class);
+	// public static Logger MyLogs = Logger.getLogger(LoggerLib.class);
 
-	//public static void main(String[] args) {
+	public void logging() {
 
-		//customLogs.info("***Starting Test case***");
+		System.out.println("Hello Beautiful World !!");
+
+		// MyLogs.info("***hello Test case***");
+
 	}
 
-
+}

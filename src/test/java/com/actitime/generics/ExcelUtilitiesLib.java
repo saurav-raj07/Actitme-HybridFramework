@@ -2,6 +2,7 @@ package com.actitime.generics;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.apache.poi.EncryptedDocumentException;
@@ -11,16 +12,25 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 public class ExcelUtilitiesLib {
 
-	String value;
+	public static String readData(String sheet, int row, int cell) {
 
-	public String readData(String sheet, int row, int cell)
-			throws IOException, EncryptedDocumentException, InvalidFormatException {
+		String value = null;
+		
+		try {
+			FileInputStream fis = new FileInputStream(new File("./src/test/resources/TestData/ActitimeHybridFramework_TestData.xlsx"));
+			Workbook wbf = WorkbookFactory.create(fis);
+			value = wbf.getSheet(sheet).getRow(row).getCell(cell).getStringCellValue();
+			fis.close();
+		} catch (EncryptedDocumentException e) {
+			e.printStackTrace();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (InvalidFormatException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
-		FileInputStream fis = new FileInputStream(
-				new File("./src/test/resources/ActitimeHybridFramework_TestData.xlsx"));
-		Workbook wbf = WorkbookFactory.create(fis);
-		value = wbf.getSheet(sheet).getRow(row).getCell(cell).getStringCellValue();
-		fis.close();
 		return value;
 	}
 }

@@ -24,36 +24,37 @@ public class LoginPage {
 
 	@FindBy(xpath = "//img[contains(@src,'timer.gif')]")
 	private WebElement LoginPageActitimeLogo;
-	
-	@FindBy(xpath="//span[contains(text(),'Username or Password is invalid')]")
+
+	@FindBy(xpath = "//span[contains(text(),'Username or Password is invalid')]")
 	private WebElement invalidLoginMessage;
 
+	// Constructor
 	public LoginPage(WebDriver driver) {
 
 		this.driver = driver;
 		/*
-		 * this is to match the driver in the LoginPage class (In line 15) with
-		 * the driver instance passed from the invoking class
+		 * this is to match the driver in the LoginPage class (In line 15) with the
+		 * driver instance passed from the invoking class
 		 */
 		PageFactory.initElements(driver, this);
 	}
 
 	public void loginFunction(String username, String password) {
 		userNameTxtBox.sendKeys(username);
-		Reporter.log("--> username entered", true);
+		Reporter.log("--> Username entered", true);
 		passwordTxtBox.sendKeys(password);
-		Reporter.log("--> password entered", true);
+		Reporter.log("--> Password entered", true);
 		loginButton.click();
-		Reporter.log("--> Login button clicked", true);
+		Reporter.log("--> Logged Button Clicked", true);
 	}
 
 	public void invalidLoginFunction() {
-		String act= invalidLoginMessage.getText();
-		String exp= "Username or Password is invalid. Please try again.";
-		Assert.assertNotSame(act, exp);
-		Reporter.log("-->Username or Password is invalid. Please try again.",true);
-		
-		
+		String act = invalidLoginMessage.getText();
+		String exp = "Username or Password is invalid. Please try again.";
+		Assert.assertEquals(act, exp);
+		Reporter.log("--> Invalid Login",true);
+		Reporter.log(act, true);
+
 	}
 
 }

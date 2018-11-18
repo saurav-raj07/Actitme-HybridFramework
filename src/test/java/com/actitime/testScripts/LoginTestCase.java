@@ -14,7 +14,7 @@ public class LoginTestCase extends BaseLib {
 	LoginPage lp;
 	EnterTimeTrackPage etp;
 
-	@Test(priority=1)
+	@Test(priority=1,enabled=true)
 	public void loginTest()  {
 		String username = PropUtilityLib.readProp("id");
 		String password = PropUtilityLib.readProp("password");
@@ -22,9 +22,10 @@ public class LoginTestCase extends BaseLib {
 		lp.loginFunction(username, password);
 		etp = new EnterTimeTrackPage(driver);
 		etp.verifyHomePageLogo();
+		etp.verifyHomePageTitle();
 	}
 
-	@Test(priority=2)
+	@Test(priority=2, enabled=true)
 	public void invalidLoginTest() {
 
 		String username = ExcelUtilitiesLib.readData("MyTestDataSheet", 1, 1);

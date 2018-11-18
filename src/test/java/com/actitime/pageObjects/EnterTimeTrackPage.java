@@ -1,31 +1,30 @@
 package com.actitime.pageObjects;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.Reporter;
 
-import com.actitime.generics.WaitStatementLib;
 
-public class EnterTimeTrackPage {
+public class EnterTimeTrackPage extends BasePage{
 	
 	WebDriver driver;
 	
-	@FindBy(xpath = "//img[contains(@src,'logo.png')]")
-	private WebElement homePageActiTimeLogo;
-	
-
+	//Constructor
 	public EnterTimeTrackPage(WebDriver driver) {
+		super(driver);
 		this.driver= driver;
 		PageFactory.initElements(driver, this);
 
 	}
 	
-	public void verifyHomePageLogo() {
-		WaitStatementLib ws = new WaitStatementLib(driver);
-		ws.eWait(3, homePageActiTimeLogo);
-		Reporter.log("--> Home page displayed", true);
+	
+	public void verifyHomePageTitle() {
+		String exp="actiTIME - Enter Time-Track";
+		String act=driver.getTitle();
+		Assert.assertEquals(act, exp);
+		Reporter.log("--> Home Page Title is Verified", true);
 	}
+	
 
 }

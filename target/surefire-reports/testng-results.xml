@@ -1,116 +1,191 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
     <line>
-      <![CDATA[--> username entered]]>
+      <![CDATA[--> Username entered]]>
     </line>
     <line>
-      <![CDATA[--> password entered]]>
+      <![CDATA[--> Password entered]]>
     </line>
     <line>
-      <![CDATA[--> Login button clicked]]>
+      <![CDATA[--> Logged Button Clicked]]>
     </line>
     <line>
-      <![CDATA[--> Home page displayed]]>
+      <![CDATA[--> Home page logo Verified]]>
     </line>
     <line>
-      <![CDATA[--> loginTest is Passed Sucessfully]]>
+      <![CDATA[--> Home Page Title is Verified]]>
+    </line>
+    <line>
+      <![CDATA[-------------------> loginTest is Passed Sucessfully]]>
     </line>
     <line>
       <![CDATA[--> Browser closed]]>
     </line>
     <line>
-      <![CDATA[--> username entered]]>
+      <![CDATA[--> Username entered]]>
     </line>
     <line>
-      <![CDATA[--> password entered]]>
+      <![CDATA[--> Password entered]]>
     </line>
     <line>
-      <![CDATA[--> Login button clicked]]>
+      <![CDATA[--> Logged Button Clicked]]>
     </line>
     <line>
-      <![CDATA[-->Username or Password is invalid. Please try again.]]>
+      <![CDATA[--> Invalid Login]]>
     </line>
     <line>
-      <![CDATA[--> invalidLoginTest is Passed Sucessfully]]>
+      <![CDATA[Username or Password is invalid. Please try again.]]>
+    </line>
+    <line>
+      <![CDATA[-------------------> invalidLoginTest is Passed Sucessfully]]>
+    </line>
+    <line>
+      <![CDATA[--> Browser closed]]>
+    </line>
+    <line>
+      <![CDATA[--> Username entered]]>
+    </line>
+    <line>
+      <![CDATA[--> Password entered]]>
+    </line>
+    <line>
+      <![CDATA[--> Logged Button Clicked]]>
+    </line>
+    <line>
+      <![CDATA[--> Navigated to Tasks Tab]]>
+    </line>
+    <line>
+      <![CDATA[Open Tasks Page title is verified]]>
+    </line>
+    <line>
+      <![CDATA[--> Navigated to Active Project & Customer]]>
+    </line>
+    <line>
+      <![CDATA[--> New Customer Created]]>
+    </line>
+    <line>
+      <![CDATA[Customer "Rajnish Kansal" has been successfully created.]]>
+    </line>
+    <line>
+      <![CDATA[-------------------> createNewCustomer is Passed Sucessfully]]>
+    </line>
+    <line>
+      <![CDATA[--> Browser closed]]>
+    </line>
+    <line>
+      <![CDATA[--> Username entered]]>
+    </line>
+    <line>
+      <![CDATA[--> Password entered]]>
+    </line>
+    <line>
+      <![CDATA[--> Logged Button Clicked]]>
+    </line>
+    <line>
+      <![CDATA[--> Navigated to Tasks Tab]]>
+    </line>
+    <line>
+      <![CDATA[--> Navigated to Active Project & Customer]]>
+    </line>
+    <line>
+      <![CDATA[--> Customer Selected]]>
+    </line>
+    <line>
+      <![CDATA[--> Custome verified before deletion]]>
+    </line>
+    <line>
+      <![CDATA[--> Customer Deleted]]>
+    </line>
+    <line>
+      <![CDATA[Customer has been successfully deleted.]]>
+    </line>
+    <line>
+      <![CDATA[-------------------> deleteCustomer is Passed Sucessfully]]>
     </line>
     <line>
       <![CDATA[--> Browser closed]]>
     </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="57127" started-at="2018-11-18T09:40:25Z" finished-at="2018-11-18T09:41:22Z">
+  <suite name="Suite" duration-ms="57778" started-at="2018-11-18T19:49:46Z" finished-at="2018-11-18T19:50:44Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="57127" started-at="2018-11-18T09:40:25Z" finished-at="2018-11-18T09:41:22Z">
+    <test name="Test" duration-ms="57778" started-at="2018-11-18T19:49:46Z" finished-at="2018-11-18T19:50:44Z">
       <class name="com.actitime.testScripts.LoginTestCase">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.actitime.testScripts.LoginTestCase@5a8e6209]" name="setUp" is-config="true" duration-ms="25476" started-at="2018-11-18T09:40:25Z" finished-at="2018-11-18T09:40:51Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.actitime.testScripts.LoginTestCase@1f28c152]" name="setUp" is-config="true" duration-ms="27665" started-at="2018-11-18T19:49:46Z" finished-at="2018-11-18T19:50:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginTest()[pri:1, instance:com.actitime.testScripts.LoginTestCase@5a8e6209]" name="loginTest" duration-ms="3943" started-at="2018-11-18T09:40:51Z" finished-at="2018-11-18T09:40:55Z">
+        <test-method status="PASS" signature="loginTest()[pri:1, instance:com.actitime.testScripts.LoginTestCase@1f28c152]" name="loginTest" duration-ms="2314" started-at="2018-11-18T19:50:14Z" finished-at="2018-11-18T19:50:16Z">
           <reporter-output>
             <line>
-              <![CDATA[--> username entered]]>
+              <![CDATA[--> Username entered]]>
             </line>
             <line>
-              <![CDATA[--> password entered]]>
+              <![CDATA[--> Password entered]]>
             </line>
             <line>
-              <![CDATA[--> Login button clicked]]>
+              <![CDATA[--> Logged Button Clicked]]>
             </line>
             <line>
-              <![CDATA[--> Home page displayed]]>
+              <![CDATA[--> Home page logo Verified]]>
+            </line>
+            <line>
+              <![CDATA[--> Home Page Title is Verified]]>
             </line>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.actitime.testScripts.LoginTestCase@5a8e6209]" name="tearDown" is-config="true" duration-ms="756" started-at="2018-11-18T09:40:55Z" finished-at="2018-11-18T09:40:55Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.actitime.testScripts.LoginTestCase@1f28c152]" name="tearDown" is-config="true" duration-ms="752" started-at="2018-11-18T19:50:16Z" finished-at="2018-11-18T19:50:17Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=loginTest status=SUCCESS method=LoginTestCase.loginTest()[pri:1, instance:com.actitime.testScripts.LoginTestCase@5a8e6209] output=--> username entered]]]>
+                <![CDATA[[TestResult name=loginTest status=SUCCESS method=LoginTestCase.loginTest()[pri:1, instance:com.actitime.testScripts.LoginTestCase@1f28c152] output=--> Username entered]]]>
               </value>
             </param>
           </params>
           <reporter-output>
             <line>
-              <![CDATA[--> loginTest is Passed Sucessfully]]>
+              <![CDATA[-------------------> loginTest is Passed Sucessfully]]>
             </line>
             <line>
               <![CDATA[--> Browser closed]]>
             </line>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.actitime.testScripts.LoginTestCase@5a8e6209]" name="setUp" is-config="true" duration-ms="24787" started-at="2018-11-18T09:40:55Z" finished-at="2018-11-18T09:41:20Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.actitime.testScripts.LoginTestCase@1f28c152]" name="setUp" is-config="true" duration-ms="24762" started-at="2018-11-18T19:50:17Z" finished-at="2018-11-18T19:50:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="invalidLoginTest()[pri:2, instance:com.actitime.testScripts.LoginTestCase@5a8e6209]" name="invalidLoginTest" duration-ms="1438" started-at="2018-11-18T09:41:20Z" finished-at="2018-11-18T09:41:22Z">
+        <test-method status="PASS" signature="invalidLoginTest()[pri:2, instance:com.actitime.testScripts.LoginTestCase@1f28c152]" name="invalidLoginTest" duration-ms="1549" started-at="2018-11-18T19:50:42Z" finished-at="2018-11-18T19:50:43Z">
           <reporter-output>
             <line>
-              <![CDATA[--> username entered]]>
+              <![CDATA[--> Username entered]]>
             </line>
             <line>
-              <![CDATA[--> password entered]]>
+              <![CDATA[--> Password entered]]>
             </line>
             <line>
-              <![CDATA[--> Login button clicked]]>
+              <![CDATA[--> Logged Button Clicked]]>
             </line>
             <line>
-              <![CDATA[-->Username or Password is invalid. Please try again.]]>
+              <![CDATA[--> Invalid Login]]>
+            </line>
+            <line>
+              <![CDATA[Username or Password is invalid. Please try again.]]>
             </line>
           </reporter-output>
         </test-method> <!-- invalidLoginTest -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.actitime.testScripts.LoginTestCase@5a8e6209]" name="tearDown" is-config="true" duration-ms="689" started-at="2018-11-18T09:41:22Z" finished-at="2018-11-18T09:41:22Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.actitime.testScripts.LoginTestCase@1f28c152]" name="tearDown" is-config="true" duration-ms="708" started-at="2018-11-18T19:50:43Z" finished-at="2018-11-18T19:50:44Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=invalidLoginTest status=SUCCESS method=LoginTestCase.invalidLoginTest()[pri:2, instance:com.actitime.testScripts.LoginTestCase@5a8e6209] output=--> username entered]]]>
+                <![CDATA[[TestResult name=invalidLoginTest status=SUCCESS method=LoginTestCase.invalidLoginTest()[pri:2, instance:com.actitime.testScripts.LoginTestCase@1f28c152] output=--> Username entered]]]>
               </value>
             </param>
           </params>
           <reporter-output>
             <line>
-              <![CDATA[--> invalidLoginTest is Passed Sucessfully]]>
+              <![CDATA[-------------------> invalidLoginTest is Passed Sucessfully]]>
             </line>
             <line>
               <![CDATA[--> Browser closed]]>
@@ -120,4 +195,113 @@
       </class> <!-- com.actitime.testScripts.LoginTestCase -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
+  <suite name="Suite (0)" duration-ms="57676" started-at="2018-11-18T19:50:44Z" finished-at="2018-11-18T19:51:42Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="57676" started-at="2018-11-18T19:50:44Z" finished-at="2018-11-18T19:51:42Z">
+      <class name="com.actitime.testScripts.TasksTestCase">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.actitime.testScripts.TasksTestCase@3d99d22e]" name="setUp" is-config="true" duration-ms="24198" started-at="2018-11-18T19:50:44Z" finished-at="2018-11-18T19:51:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="createNewCustomer()[pri:1, instance:com.actitime.testScripts.TasksTestCase@3d99d22e]" name="createNewCustomer" duration-ms="5191" started-at="2018-11-18T19:51:08Z" finished-at="2018-11-18T19:51:14Z">
+          <reporter-output>
+            <line>
+              <![CDATA[--> Username entered]]>
+            </line>
+            <line>
+              <![CDATA[--> Password entered]]>
+            </line>
+            <line>
+              <![CDATA[--> Logged Button Clicked]]>
+            </line>
+            <line>
+              <![CDATA[--> Navigated to Tasks Tab]]>
+            </line>
+            <line>
+              <![CDATA[Open Tasks Page title is verified]]>
+            </line>
+            <line>
+              <![CDATA[--> Navigated to Active Project & Customer]]>
+            </line>
+            <line>
+              <![CDATA[--> New Customer Created]]>
+            </line>
+            <line>
+              <![CDATA[Customer "Rajnish Kansal" has been successfully created.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- createNewCustomer -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.actitime.testScripts.TasksTestCase@3d99d22e]" name="tearDown" is-config="true" duration-ms="642" started-at="2018-11-18T19:51:14Z" finished-at="2018-11-18T19:51:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=createNewCustomer status=SUCCESS method=TasksTestCase.createNewCustomer()[pri:1, instance:com.actitime.testScripts.TasksTestCase@3d99d22e] output=--> Username entered]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[-------------------> createNewCustomer is Passed Sucessfully]]>
+            </line>
+            <line>
+              <![CDATA[--> Browser closed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.actitime.testScripts.TasksTestCase@3d99d22e]" name="setUp" is-config="true" duration-ms="23209" started-at="2018-11-18T19:51:14Z" finished-at="2018-11-18T19:51:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="deleteCustomer()[pri:0, instance:com.actitime.testScripts.TasksTestCase@3d99d22e]" name="deleteCustomer" duration-ms="3792" started-at="2018-11-18T19:51:37Z" depends-on-methods="com.actitime.testScripts.TasksTestCase.createNewCustomer" finished-at="2018-11-18T19:51:41Z">
+          <reporter-output>
+            <line>
+              <![CDATA[--> Username entered]]>
+            </line>
+            <line>
+              <![CDATA[--> Password entered]]>
+            </line>
+            <line>
+              <![CDATA[--> Logged Button Clicked]]>
+            </line>
+            <line>
+              <![CDATA[--> Navigated to Tasks Tab]]>
+            </line>
+            <line>
+              <![CDATA[--> Navigated to Active Project & Customer]]>
+            </line>
+            <line>
+              <![CDATA[--> Customer Selected]]>
+            </line>
+            <line>
+              <![CDATA[--> Custome verified before deletion]]>
+            </line>
+            <line>
+              <![CDATA[--> Customer Deleted]]>
+            </line>
+            <line>
+              <![CDATA[Customer has been successfully deleted.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- deleteCustomer -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.actitime.testScripts.TasksTestCase@3d99d22e]" name="tearDown" is-config="true" duration-ms="636" started-at="2018-11-18T19:51:41Z" finished-at="2018-11-18T19:51:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=deleteCustomer status=SUCCESS method=TasksTestCase.deleteCustomer()[pri:0, instance:com.actitime.testScripts.TasksTestCase@3d99d22e] output=--> Username entered]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[-------------------> deleteCustomer is Passed Sucessfully]]>
+            </line>
+            <line>
+              <![CDATA[--> Browser closed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.actitime.testScripts.TasksTestCase -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite (0) -->
 </testng-results>

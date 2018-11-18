@@ -17,17 +17,18 @@ public class BaseLib {
 	@BeforeMethod
 	public void setUp() throws IOException {
 
-		String browser= PropUtilityLib.readProp("browser");
-		String baseurl= PropUtilityLib.readProp("baseurl");
-		
-		if(browser.equalsIgnoreCase("chrome")) {
-		
-		System.setProperty("webdriver.chrome.driver", "./exefiles/chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		driver.get(baseurl);
+		String browser = PropUtilityLib.readProp("browser");
+		String baseurl = PropUtilityLib.readProp("baseurl");
+		// final String waitTime = PropUtilityLib.readProp("WAIT_TIME");
+
+		if (browser.equalsIgnoreCase("chrome")) {
+
+			System.setProperty("webdriver.chrome.driver", "./exefiles/chromedriver.exe");
+			driver = new ChromeDriver();
+			driver.manage().window().maximize();
+			driver.manage().deleteAllCookies();
+			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+			driver.get(baseurl);
 		}
 	}
 
@@ -37,17 +38,16 @@ public class BaseLib {
 		String scriptName = result.getMethod().getMethodName();
 
 		if (result.isSuccess()) {
-			Reporter.log("--> " + scriptName + " is Passed Sucessfully");
-		} 
-		else {
-			Reporter.log("--> " + scriptName + " is Failed");
+			Reporter.log("-------------------> " + scriptName + " is Passed Sucessfully", true);
+		} else {
+			Reporter.log("-------------------> " + scriptName + " is Failed", true);
 			ScreenshotLib sslib = new ScreenshotLib();
 			sslib.captureScreenshot(driver, scriptName);
-			Reporter.log("-->Failure Screenshot ahs been Taken", true);
+			Reporter.log("------------------->Failure Screenshot has been Taken", true);
 		}
 
 		driver.quit();
-		Reporter.log("--> Browser closed",true);
+		Reporter.log("--> Browser closed", true);
 	}
 
 }

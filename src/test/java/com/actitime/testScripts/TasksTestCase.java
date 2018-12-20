@@ -14,52 +14,40 @@ import com.actitime.pageObjects.OpenTasksPage;
 
 public class TasksTestCase extends BaseLib {
 
-	LoginPage lp;
-	EnterTimeTrackPage etp;
-	OpenTasksPage otp;
-	ActiveProjNCustPage apc;
-	CreateNewCustomerPage ccf;
-	EditCustomerInfoPage eci;
+	private final LoginPage loginPage = new LoginPage(driver);
+	private final EnterTimeTrackPage enterTimeTrackPage = new EnterTimeTrackPage(driver);
+	private final OpenTasksPage openTasksPage = new OpenTasksPage(driver);
+	private final ActiveProjNCustPage activeProjNCustPage = new ActiveProjNCustPage(driver);
+	private final CreateNewCustomerPage createNewCustomerPage = new CreateNewCustomerPage(driver);
+	private final EditCustomerInfoPage editCustomerInfoPage = new EditCustomerInfoPage(driver);
+	private final String username = PropUtilityLib.readProp("id");
+	private final String password = PropUtilityLib.readProp("password");
 
 	@Test(priority=1,enabled=true)
 	public void createNewCustomer() {
-
-		String username = PropUtilityLib.readProp("id");
-		String password = PropUtilityLib.readProp("password");
-		lp = new LoginPage(driver);
-		lp.loginFunction(username, password);
-		etp = new EnterTimeTrackPage(driver);
-		etp.clickOnTasksTab();
-		otp = new OpenTasksPage(driver);
-		otp.verifyOpenTaskPageTitle();
-		otp.clickOnProjNCustBtn();
-		apc = new ActiveProjNCustPage(driver);
-		apc.clcOnCreateNewCustBtn();
+		
+		loginPage.loginFunction(username, password);		
+		enterTimeTrackPage.clickOnTasksTab();
+		openTasksPage.verifyOpenTaskPageTitle();
+		openTasksPage.clickOnProjNCustBtn();
+		activeProjNCustPage.clcOnCreateNewCustBtn();
 		String customerName = ExcelUtilitiesLib.readData("MyTestDataSheet", 2, 3);
 		String description = ExcelUtilitiesLib.readData("myTestDataSheet", 2, 4);
-		ccf= new CreateNewCustomerPage(driver);
-		ccf.createnewCustFunction(customerName, description);
-		apc.verifyNewCust(customerName);
+		createNewCustomerPage.createnewCustFunction(customerName, description);
+		activeProjNCustPage.verifyNewCust(customerName);
 	}
 	
 	@Test(dependsOnMethods= {"createNewCustomer"},enabled=true)
 	public void deleteCustomer() {
 		
-		String username = PropUtilityLib.readProp("id");
-		String password = PropUtilityLib.readProp("password");
-		lp = new LoginPage(driver);
-		lp.loginFunction(username, password);
-		etp = new EnterTimeTrackPage(driver);
-		etp.clickOnTasksTab();
-		otp = new OpenTasksPage(driver);
-		otp.clickOnProjNCustBtn();
+		loginPage.loginFunction(username, password);
+		enterTimeTrackPage.clickOnTasksTab();
+		openTasksPage.clickOnProjNCustBtn();
 		String customerName = ExcelUtilitiesLib.readData("MyTestDataSheet", 2, 3);
-		apc= new ActiveProjNCustPage(driver);
-		apc.selectCustomer(customerName);
-		eci = new EditCustomerInfoPage(driver);
-		eci.verifyCustomerBeforeDelete(customerName);
-		eci.deleteCustomer();
-		apc.verifyCustomerDeletion(customerName);
+		activeProjNCustPage.selectCustomer(customerName);
+		editCustomerInfoPage.verifyCustomerBeforeDelete(customerName);
+		editCustomerInfoPage.deleteCustomer();
+		activeProjNCustPage.verifyCustomerDeletion(customerName);
 		
 		
 		

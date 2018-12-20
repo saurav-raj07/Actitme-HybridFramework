@@ -33,11 +33,11 @@ public class BaseLib {
 	}
 
 	@AfterMethod
-	public void tearDown(ITestResult result) throws InterruptedException, IOException {
+	public void tearDown(ITestResult testResult) throws InterruptedException, IOException {
 
-		String scriptName = result.getMethod().getMethodName();
+		String scriptName = testResult.getMethod().getMethodName();
 
-		if (result.isSuccess()) {
+		if (testResult.isSuccess()) {
 			Reporter.log("-------------------> " + scriptName + " is Passed Sucessfully", true);
 		} else {
 			Reporter.log("-------------------> " + scriptName + " is Failed", true);

@@ -11,18 +11,18 @@ import com.actitime.pageObjects.LoginPage;
 
 public class LoginTestCase extends BaseLib {
 
-	LoginPage lp;
-	EnterTimeTrackPage etp;
+	
+	private final LoginPage loginPage = new LoginPage(driver);
+	private final EnterTimeTrackPage enterTimeTrackPage = new EnterTimeTrackPage(driver);
+	private final String username = PropUtilityLib.readProp("id");
+	private final String password = PropUtilityLib.readProp("password");
 
 	@Test(priority=1,enabled=true)
 	public void loginTest()  {
-		String username = PropUtilityLib.readProp("id");
-		String password = PropUtilityLib.readProp("password");
-		lp = new LoginPage(driver);
-		lp.loginFunction(username, password);
-		etp = new EnterTimeTrackPage(driver);
-		etp.verifyHomePageLogo();
-		etp.verifyHomePageTitle();
+		
+		loginPage.loginFunction(username, password);		
+		enterTimeTrackPage.verifyHomePageLogo();
+		enterTimeTrackPage.verifyHomePageTitle();
 	}
 
 	@Test(priority=2, enabled=true)
@@ -30,9 +30,8 @@ public class LoginTestCase extends BaseLib {
 
 		String username = ExcelUtilitiesLib.readData("MyTestDataSheet", 1, 1);
 		String password = ExcelUtilitiesLib.readData("myTestDataSheet", 1, 2);
-		lp= new LoginPage(driver);
-		lp.loginFunction(username, password);
-		lp.invalidLoginFunction();
+		loginPage.loginFunction(username, password);
+		loginPage.invalidLoginFunction();
 	}
 
 }

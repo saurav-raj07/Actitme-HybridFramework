@@ -4,7 +4,7 @@ package com.actitime.loggers;
 
 public class LoggerLib {
 
-	// public static Logger MyLogs = Logger.getLogger(LoggerLib.class);
+	//public static Logger MyLogs = Logger.getLogger(LoggerLib.class);
 
 	public void logging() {
 

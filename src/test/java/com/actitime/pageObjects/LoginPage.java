@@ -33,7 +33,7 @@ public class LoginPage {
 
 		this.driver = driver;
 		/*
-		 * this is to match the driver in the LoginPage class (In line 15) with the
+		 * this is to match the driver in the LoginPage class (In line 14) with the
 		 * driver instance passed from the invoking class
 		 */
 		PageFactory.initElements(driver, this);

@@ -16,7 +16,6 @@ public class WaitStatementLib {
 		this.driver = driver; 
 /*this is to match the driver in the waitStatementLib class (In line 12)
 with the driver instance passed from the invoking class*/
-
 		}
 
 	public void iSleep(int secs) {

@@ -3,13 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.actitime.testScripts.TasksTestCase">
+      <class name="com.actitime.testScripts.AuthenticationPopUp">
         <methods>
-          <include name="deleteCustomer"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
+          <include name="authentationPopUptesting"/>
         </methods>
-      </class> <!-- com.actitime.testScripts.TasksTestCase -->
+      </class> <!-- com.actitime.testScripts.AuthenticationPopUp -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

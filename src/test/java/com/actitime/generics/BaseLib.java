@@ -5,6 +5,8 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
@@ -24,7 +26,8 @@ public class BaseLib {
 		if (browser.equalsIgnoreCase("chrome")) {
 
 			System.setProperty("webdriver.chrome.driver", "./exefiles/chromedriver.exe");
-			driver = new ChromeDriver();
+//			driver = new ChromeDriver();
+			driver = new RemoteWebDriver(DesiredCapabilities.chrome());
 			driver.manage().window().maximize();
 			driver.manage().deleteAllCookies();
 			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
@@ -36,6 +39,7 @@ public class BaseLib {
 	public void tearDown(ITestResult testResult) throws InterruptedException, IOException {
 
 		String scriptName = testResult.getMethod().getMethodName();
+		
 
 		if (testResult.isSuccess()) {
 			Reporter.log("-------------------> " + scriptName + " is Passed Sucessfully", true);

@@ -8,9 +8,10 @@
     <classes>
       <class name="com.actitime.testScripts.LoginTestCase">
         <methods>
-          <include name="LoginFunction"/>
+          <include name="invalidLoginTest"/>
           <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="loginTest"/>
         </methods>
       </class> <!-- com.actitime.testScripts.LoginTestCase -->
     </classes>

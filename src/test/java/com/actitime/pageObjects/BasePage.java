@@ -34,4 +34,6 @@ public abstract class BasePage {
 		tasksLink.click();
 		Reporter.log("--> Navigated to Tasks Tab",true);
 	}
+	
+	abstract public void absMethod();
 }

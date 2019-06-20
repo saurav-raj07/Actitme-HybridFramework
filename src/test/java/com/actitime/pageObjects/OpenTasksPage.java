@@ -21,8 +21,8 @@ public class OpenTasksPage {
 
 	public void verifyOpenTaskPageTitle() {
 
-		String act = "actiTIME - Open Tasks";
-		String exp = driver.getTitle();
+		String act = driver.getTitle();
+		String exp = "actiTIME - Open Tasks";
 		Assert.assertEquals(act, exp);
 	}
 

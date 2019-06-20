@@ -25,6 +25,13 @@ public class EnterTimeTrackPage extends BasePage{
 		Assert.assertEquals(act, exp);
 		Reporter.log("--> Home Page Title is Verified", true);
 	}
+
+
+	@Override
+	public void absMethod() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 
 }

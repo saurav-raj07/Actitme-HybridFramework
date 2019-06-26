@@ -1,16 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
   <reporter-output>
+    <line>
+      <![CDATA[-----> sikuliFileDownload is Passed Sucessfully]]>
+    </line>
+    <line>
+      <![CDATA[-----> Browser closed]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="10679" started-at="2019-06-19T17:43:59Z" finished-at="2019-06-19T17:44:09Z">
+  <suite name="Default suite" duration-ms="16915" started-at="2019-06-23T20:51:50Z" finished-at="2019-06-23T20:52:06Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="10679" started-at="2019-06-19T17:43:59Z" finished-at="2019-06-19T17:44:09Z">
+    <test name="Default test" duration-ms="16915" started-at="2019-06-23T20:51:50Z" finished-at="2019-06-23T20:52:06Z">
       <class name="com.actitime.testScripts.AuthenticationPopUp">
-        <test-method status="PASS" signature="authentationPopUptesting()[pri:0, instance:com.actitime.testScripts.AuthenticationPopUp@491cc5c9]" name="authentationPopUptesting" duration-ms="10650" started-at="2019-06-19T17:43:59Z" finished-at="2019-06-19T17:44:09Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.actitime.testScripts.AuthenticationPopUp@569cfc36]" name="setUp" is-config="true" duration-ms="16082" started-at="2019-06-23T20:51:50Z" finished-at="2019-06-23T20:52:06Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- authentationPopUptesting -->
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="sikuliFileDownload()[pri:0, instance:com.actitime.testScripts.AuthenticationPopUp@569cfc36]" name="sikuliFileDownload" duration-ms="10" started-at="2019-06-23T20:52:06Z" finished-at="2019-06-23T20:52:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sikuliFileDownload -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.actitime.testScripts.AuthenticationPopUp@569cfc36]" name="tearDown" is-config="true" duration-ms="804" started-at="2019-06-23T20:52:06Z" finished-at="2019-06-23T20:52:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=sikuliFileDownload status=SUCCESS method=AuthenticationPopUp.sikuliFileDownload()[pri:0, instance:com.actitime.testScripts.AuthenticationPopUp@569cfc36] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[-----> sikuliFileDownload is Passed Sucessfully]]>
+            </line>
+            <line>
+              <![CDATA[-----> Browser closed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- com.actitime.testScripts.AuthenticationPopUp -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

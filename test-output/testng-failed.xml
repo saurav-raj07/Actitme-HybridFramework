@@ -5,7 +5,9 @@
     <classes>
       <class name="com.actitime.testScripts.AuthenticationPopUp">
         <methods>
-          <include name="authentationPopUptesting"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="sikuliFileDownload"/>
         </methods>
       </class> <!-- com.actitime.testScripts.AuthenticationPopUp -->
     </classes>

@@ -1,31 +1,60 @@
 package com.actitime.testScripts;
 
-import java.util.concurrent.TimeUnit;
-
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.testng.annotations.Test;  
+import org.testng.annotations.Test;
+import com.actitime.generics.BaseLib;
 
-public class AuthenticationPopUp {
+public class AuthenticationPopUp extends BaseLib {
 
-	@Test
+	@Test(enabled=false)
 	public void authentationPopUptesting() {
 		
 		
-		System.setProperty("webdriver.chrome.driver", "./exefiles/chromedriver.exe");
-//		WebDriver driver = new InternetExplorerDriver();
-//		WebDriver driver = new FirefoxDriver();
-		WebDriver driver =new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.get("http://admin:admin@the-internet.herokuapp.com/basic_auth");
+//		System.setProperty("webdriver.chrome.driver", "./exefiles/chromedriver.exe");
+////		WebDriver driver = new InternetExplorerDriver();
+////		WebDriver driver = new FirefoxDriver();
+//		WebDriver driver =new ChromeDriver();
+//		driver.manage().window().maximize();
+//		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+//		driver.get("http://admin:admin@the-internet.herokuapp.com/basic_auth");
 		String innertextOfElement = driver.findElement(By.xpath("//h3[text()='Basic Auth']")).getAttribute("innerText");
 		System.out.println(innertextOfElement);
-		driver.close();
 		
+	}
+	
+	@Test(enabled=false)
+	public void hiddenDivPopup() throws Throwable {
+		
+		driver.findElement(By.xpath("//div[@class='fsw_inputBox dates inactiveWidget ']//span")).click();
+		String currentDt = getTodaysDate();
+		
+		Thread.sleep(3000);		
+	}
+	
+	
+	@Test(enabled=true)
+	public void sikuliFileDownload() throws Throwable {
+		System.out.println(" hello world");
+		Screen screen = new Screen();
+//		
+//		Pattern pattern = new Pattern("abc");
+//		
+//		screen.click();
+	}
+	
+	
+	public String getTodaysDate() throws Throwable {
+		
+		Date date = new Date();
+		System.out.println(date.getHours()); //deprecated methods
+		System.out.println(date.getMonth()); //deprecated methods
+		System.out.println(date.getDate());  //deprecated methods
+		SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-yyyy HH:mm:ss");
+		String dt = sdf.format(date);
+		System.out.println("-----> Current date is: " + dt);
+		return dt;
 		
 		
 	}

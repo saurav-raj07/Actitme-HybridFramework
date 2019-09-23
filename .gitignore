@@ -1,1 +1,4 @@
-/target/
+.classpath
+.project
+target/
+test-output/*.txt

@@ -23,7 +23,6 @@ public class BaseLib {
 
 		String browser = PropUtilityLib.readProp("browser");
 		String baseurl = PropUtilityLib.readProp("baseurl");
-//		final String waitTime = PropUtilityLib.readProp("WAIT_TIME");
 
 		if (browser.equalsIgnoreCase("chrome")) {
 
